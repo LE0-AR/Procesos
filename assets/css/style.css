@@ -1,14 +1,30 @@
 /* 1200 x 780 */
+@import url("https://fonts.cdnfonts.com/css/ica-rubrik-black");
+@import url("https://fonts.cdnfonts.com/css/poppins");
+
 body{
     margin: 0;
     font-size: 15px;
-    background-color: darkslategray;
+     background-color: #1B1B1B;
+    color: #eef8ce;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    background-image:
+    url(/assets/img/bg.png),
+    repeating-linear-gradient(
+        to right, transparent 0 500px, #73814B33 500px 501px
+    );
+    background-size: 100%;
 }
-*{
+*::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     list-style: none;
+    box-sizing: border-box;
 }
 /*Header*/
 
@@ -43,6 +59,10 @@ header .content-fit nav ul{
     display: flex;
     gap: 2em;
 }
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
 /*Home*/
 svg{
     color: #fff;
@@ -52,6 +72,27 @@ svg{
     --diameter: 1432px;
 }
 
+.conten{
+    margin-top: -100px;
+    position: relative;
+    text-transform: uppercase;
+}
+ .title {
+    color: #d1ff48;
+    font-size: 100px;
+    font-family: "devil breeze";
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+.title::before {
+    content: attr(data-before);
+    position: absolute;
+    top: 0.5em;
+    inset: 0.66em 0 0 0;
+    z-index: -1;
+    color: #445022;
+}
 .slider{
     /* background-color: red; */
     /* background-color: red; */
@@ -60,7 +101,7 @@ svg{
     height: 100vh;
     position: relative;
     overflow: hidden;
-    margin-top: -20px;
+    margin-top:0px;
 
 }
 .slider .list .item{
@@ -196,6 +237,7 @@ svg{
     width: var(--width-default);
     display: flex;
     justify-content: space-between;
+    z-index: 999 !important; /* Asegura que estén por encima de otros elementos */
 }
 .arrows button{
     all: unset;
@@ -209,9 +251,7 @@ svg{
     height: 70%;
     left: 50%;
     transform: translateX(-50%);
-    background-image: url(./assets/img/Logo.png);
-    background-size: cover;
-    background-position: top;
+
     pointer-events: none;
     animation: showModel 1s ease-in-out 1 forwards;
 }
@@ -226,31 +266,433 @@ svg{
     pointer-events: none;
 }
 @media all and (max-width: 1024px) {
-    .slider .list .item .content{
-        grid-template-columns: repeat(2, 300px);
+    .content-fit {
+        width: 100%;
+        padding: 2em 1em;
+        box-sizing: border-box;
     }
-    .slider .list .item .content h2{
-        font-size: 8em;
+    /* Ajustamos el slider para que use una única columna si es necesario */
+    .slider .list .item .content {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+    .slider .list .item .content h2 {
+        font-size: 7em;
     }
 }
-@media all and (max-width: 767px) {
-    .slider .list .item .content{
-        grid-template-columns: 80%;
-        justify-content: center;
-        gap: 20px;
-        top: 70px;
+@media all and (max-width: 768px) {
+    .content-fit {
+        width: 100%;
+        padding: 1em;
     }
-    .slider .list .item .content h2{
+    .slider, .banner, .section {
+        min-height: auto; /* Permite que la altura se ajuste al contenido */
+    }
+    .slider .list .item .content {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        top: 10%;
+    }
+    .slider .list .item .content h2 {
         font-size: 4em;
     }
-    .slider .list .item .content p{
-        font-size: small;
+    .slider .list .item .content p {
+        font-size: 1em;
     }
 }
 
-.logo {
-    font-size: 1.5rem; /* Ajusta el tamaño según convenga */
-    font-weight: bold;
-    letter-spacing: 0.05rem;
-    /* Añade otros estilos deseados */
+/* Opcional: Reducir fuentes en secciones generales */
+@media screen and (max-width: 480px) {
+    .title, .conten .title {
+        font-size: 2.5em;
+    }
+    .section .number {
+        font-size: 4em;
+    }
+}
+
+/* Ajustes para la sección "description" */
+#description .content-fit {
+    padding-right: 30%;
+}
+
+#description .number {
+    font-size: 5em;
+}
+
+#description .title {
+    font-size: 7em;
+    font-weight: 500;
+}
+@media screen and (max-width: 768px) {
+    #description .content-fit {
+        padding-right: 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    #description .number {
+        font-size: 3em;  /* Ajusta según convenga */
+    }
+    #description .title {
+        font-size: 4em;  /* Ajusta según convenga */
+    }
+}
+
+/*Lo demas*/
+
+
+.banner {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+.banner .sliders {
+  position: absolute;
+  width: 200px;
+  height: 250px;
+  top: 10%;
+  left: calc(50% - 100px);
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+  animation: autoRun 20s linear infinite;
+  z-index: 2;
+}
+@keyframes autoRun {
+  from {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(0deg);
+  }
+  to {
+    transform: perspective(1000px) rotateX(-16deg) rotateY(360deg);
+  }
+}
+
+.banner .sliders .items {
+  position: absolute;
+  inset: 0 0 0 0;
+  transform: rotateY(
+      calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+    )
+    translateZ(550px);
+}
+.banner .sliders .items img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1023px) {
+  .banner .sliders {
+    width: 160px;
+    height: 200px;
+    left: calc(50% - 80px);
+  }
+  .banner .sliders .items {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(300px);
+  }
+}
+@media screen and (max-width: 767px) {
+  .banner .sliders {
+    width: 100px;
+    height: 150px;
+    left: calc(50% - 50px);
+  }
+  .banner .sliders .items {
+    transform: rotateY(
+        calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg)
+      )
+      translateZ(180px);
+  }
+  .banner .content h1 {
+    font-size: 5em;
+  }
+}
+
+.welcome {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #6efba4, #ec5813);
+  color: #fff;
+}
+.welcome h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+.welcome p {
+  font-size: 1.5em;
+}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .welcome {
+    padding: 20px 10px;
+  }
+  .welcome h1 {
+    font-size: 2em;
+  }
+  .welcome p {
+    font-size: 1.2em;
+  }
+}
+
+
+.card {
+	position: fixed;
+	top: 50%;
+	left: 100%;
+	transform: translate(-50%, -50%);
+	width: 90%;
+	max-width: 400px;
+	background: #fff;
+	box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+	padding: 16px; /* cambiado de 1rem */
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
+	z-index: 1000;
+}
+
+.card.active {
+	left: 50%;
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Estilo para el botón de cierre */
+#close-card {
+	background: #f44336;
+	color: #fff;
+	border: none;
+	padding: 8px 16px; /* cambiado de 0.5rem 1rem */
+	cursor: pointer;
+}
+
+.close-card {
+    background-color: #f44336; /* Color rojo */
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.close-card:hover {
+    background-color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+	.card {
+		width: 95%;
+	}
+}
+
+
+/*Faces*/
+.contenido {
+  position: relative;
+  padding-top: 70px; /* Ajusta el padding superior para que el contenido no se superponga con el encabezado */
+  z-index: 100; /* Un valor alto para asegurar que el encabezado esté por encima de otros elementos */
+  background: linear-gradient(to right, #73814B33, #dddcdc);
+  height: 70vh; /* Asegura que ocupe toda la altura de la ventana */
+}
+
+h1 {
+  font-size: 25px;
+  color: #000000;
+  font-weight: 700;
+  margin-top: 0px; /* Ajusta este valor según sea necesario */
+  text-align: center;
+  letter-spacing: 4px;
+  line-height: 23px;
+}
+.process-wrapper {
+  margin: auto;
+  max-width: 1080px;
+}
+
+#progress-bar-container {
+  position: relative;
+  width: 90%;
+  margin: auto;
+  height: 100px;
+  margin-top: 65px;
+}
+
+#progress-bar-container ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 15px;
+  z-index: 9999;
+  position: absolute;
+  width: 100%;
+  margin-top: -40px;
+}
+
+#progress-bar-container li:before {
+  content: " ";
+  display: block;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: solid 2px #aaa;
+  transition: all ease 0.3s;
+}
+
+#progress-bar-container li.active:before,
+#progress-bar-container li:hover:before {
+  border: solid 2px #fff;
+
+  background: linear-gradient(to right, #f95609 0%, #000000 100%);
+}
+
+#progress-bar-container li {
+  list-style: none;
+  float: left;
+  width: 20%;
+  text-align: center;
+  color: #aaa;
+  text-transform: uppercase;
+  font-size: 11px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.2s;
+  vertical-align: bottom;
+  height: 60px;
+  position: relative;
+}
+
+#progress-bar-container li .step-inner {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  font-size: 14px;
+}
+
+#progress-bar-container li.active,
+#progress-bar-container li:hover {
+  color: #9e0a0a;
+}
+
+#progress-bar-container li:after {
+  content: " ";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: #777;
+  margin: auto;
+  border: solid 7px #fff;
+  border-radius: 50%;
+  margin-top: 40px;
+  box-shadow: 0 2px 13px -1px rgba(0, 0, 0, 0.3);
+  transition: all ease 0.2s;
+}
+
+#progress-bar-container li:hover:after {
+  background: #555;
+}
+
+#progress-bar-container li.active:after {
+  background: #932020;
+}
+
+#progress-bar-container #line {
+  width: 80%;
+  margin: auto;
+  background: #eee;
+  height: 6px;
+  position: absolute;
+  left: 10%;
+  top: 57px;
+  z-index: 1;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-bar-container #line-progress {
+  content: " ";
+  width: 3%;
+  height: 100%;
+  background: #207893;
+  background: linear-gradient(to right, #f95609 0%, #000000 100%);
+  position: absolute;
+  z-index: 2;
+  border-radius: 50px;
+  transition: all ease 0.9s;
+}
+
+#progress-content-section {
+  width: 85%;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 2%;
+  border: 1px solid #000000;
+  padding: 0;
+}
+
+#progress-content-section .section-content {
+  padding: 30px 40px;
+  text-align: center;
+}
+
+#progress-content-section .section-content h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #000000;
+  letter-spacing: 1px;
+}
+
+#progress-content-section .section-content p {
+  font-size: 16px;
+  line-height: 1.8em;
+  color: #000000;
+  text-align: justify;
+}
+
+#progress-content-section .section-content {
+  display: none;
+  animation: FadeInUp 700ms ease 1;
+  animation-fill-mode: forwards;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+#progress-content-section .section-content.active {
+  display: block;
+}
+
+@keyframes FadeInUp {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+/* Nueva sección para la imagen decorativa */
+.section .decorate {
+    position:relative;
+    bottom: 0;
+    right: -50%;
+    width: 70vw; /* Ajusta el tamaño según convenga */
+    max-width: 100%;
+    z-index: 101;
+  margin-top: -100%;
+}
+
+/* Opcional: ajustes responsivos para la imagen decorativa */
+@media screen and (max-width: 768px) {
+    .section .decorate {
+        width: 90vw;
+    }
 }
