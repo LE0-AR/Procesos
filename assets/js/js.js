@@ -85,21 +85,22 @@ $(".step01").click( function() {
 });
 
 $(".step02").click( function() {
-	$("#line-progress").css("width", "25%");
+	$("#line-progress").css("width", "35%");
 	$(".strategy").addClass("active").siblings().removeClass("active");
 });
 
 $(".step03").click( function() {
-	$("#line-progress").css("width", "50%");
+	$("#line-progress").css("width", "65%");
 	$(".creative").addClass("active").siblings().removeClass("active");
 });
 
 $(".step04").click( function() {
-	$("#line-progress").css("width", "75%");
+	$("#line-progress").css("width", "100%");
 	$(".production").addClass("active").siblings().removeClass("active");
 });
 
-$(".step05").click( function() {
-	$("#line-progress").css("width", "100%");
-	$(".analysis").addClass("active").siblings().removeClass("active");
-});
+
+
+
+
+
