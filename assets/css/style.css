@@ -314,32 +314,8 @@ svg{
         font-size: 4em;
     }
 /* Ajustes para la sección "description" */
-#description .content-fit {
-    padding-right: 30%;
-}
 
-#description .number {
-    font-size: 5em;
-}
 
-#description .title {
-    font-size: 7em;
-    font-weight: 500;
-}
-@media screen and (max-width: 768px) {
-    #description .content-fit {
-        padding-right: 0;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    #description .number {
-        font-size: 3em;  /* Ajusta según convenga */
-    }
-    #description .title {
-        font-size: 4em;  /* Ajusta según convenga */
-    }
-}
 
 /*Lo demas*/
 
@@ -854,3 +830,75 @@ h1 {
     .org-mobile-line {
       display: none;
     }
+
+.download-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 0;
+}
+.btn-download {
+    background: linear-gradient(90deg, #6efba4 0%, #445022 100%);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding: 1em 2.5em;
+    border: none;
+    border-radius: 2em;
+    text-decoration: none;
+    box-shadow: 0 2px 8px #0003;
+    transition: background 0.3s, transform 0.2s;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.btn-download:hover {
+    background: linear-gradient(90deg, #445022 0%, #6efba4 100%);
+    color: #d1ff48;
+    transform: scale(1.05);
+}
+/* Responsive */
+@media (max-width: 600px) {
+    .download-buttons {
+        gap: 1em;
+    }
+    .btn-download {
+        font-size: 1em;
+        padding: 0.8em 1.2em;
+    }
+}
+
+/* Estilos para la sección de instalaciones */
+.instalaciones-descripcion {
+    margin-bottom: 2em;
+    font-size: 1.2em;
+    color: #eef8ce;
+    text-align: center;
+}
+.instalaciones-galeria {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
+}
+.instalaciones-galeria img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px #0004;
+    object-fit: cover;
+    background: #fff;
+}
+@media (max-width: 900px) {
+    .instalaciones-galeria {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .instalaciones-galeria img {
+        max-width: 90vw;
+    }
+}
