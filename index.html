@@ -8,6 +8,17 @@
         <link href="https://fonts.cdnfonts.com/css/bebas-neue" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
 </head>
+<style>
+  #slider-img-1 {
+    background-image: url('assets/img/jardin-hero-a.jpg') !important;
+}
+#slider-img-2 {
+    background-image: url('assets/img/3.png') !important;
+}
+#slider-img-3 {
+    background-image: url('assets/img/1.jpg') !important;
+}
+</style>
 <body><!--Home--->
     <header>
         <div class="content-fit">
@@ -15,7 +26,7 @@
             <nav>
                 <ul>
                     <li><a href="#intro">Nosotros</a></li>
-                    <li><a href="#description">Instalaciones</a></li>
+                    <li><a href="#description">Servicios</a></li>
                     <li><a href="#banner">Organizacion</a></li>
                 </ul>
             </nav>
@@ -26,7 +37,7 @@
   <section class="slider">
             <div class="list">
                 <div class="item active">
-                    <div class="image" style="--url: url('assets/img/jardin-hero-a.jpg')"></div>
+                    <div class="image" id="slider-img-1"></div>
                     <div class="content">
                         <h2> vivo </h2>
                         <h2> Verde </h2>
@@ -39,7 +50,7 @@
                     </div>
                 </div>
                 <div class="item ">
-                    <div class="image" style="--url: url('assets/img/3.png')"></div>
+                    <div class="image" id="slider-img-2"></div>
                     <div class="content">
                         <h2>expertos</h2>
                         <p>
@@ -51,7 +62,7 @@
                     </div>
                 </div>
                 <div class="item">
-                    <div class="image" style="--url: url('assets/img/1.jpg')"></div>
+                    <div class="image" id="slider-img-3"></div>
                     <div class="content">
                         <h2>el verde  </h2>
                         <p>
@@ -85,7 +96,7 @@
                 <div class="title"> Sobre nosotros</div>
                 <br><br>
                 <p>
-                  En Vivo Verde, nos especializamos en brindar servicios integrales para el diseño, mantenimiento y 
+                  En Verde Vivo , nos especializamos en brindar servicios integrales para el diseño, mantenimiento y 
                   cuidado de áreas verdes. Nuestro compromiso es transformar y conservar espacios naturales que aporten 
                   belleza, frescura y bienestar a hogares, empresas y comunidades. Con un equipo profesional y apasionado 
                   por la naturaleza, ofrecemos soluciones a medida que combinan funcionalidad, estética y sostenibilidad. 
@@ -111,17 +122,21 @@
 
     <div class="section" id="description">
         <div class="content-fit">
-            <div class="number">02</div>
+            <div class="number">Servicios</div>
             <div class="des">
-                <div class="title">LUNDEV</div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus voluptas a porro libero
-                    recusandae quae, aut ratione, incidunt laborum, necessitatibus similique enim doloremque ex.
-                    Laudantium obcaecati aspernatur doloremque illo beatae, maxime hic itaque consequatur nisi
-                    accusantium veritatis, voluptatem ratione! Placeat numquam nisi reiciendis harum quibusdam tempore
-                    eaque deleniti accusantium, veniam quae eos sed, asperiores laborum corporis odit mollitia
-                    consequatur adipisci? Quibusdam quis eos debitis non esse blanditiis laudantium rerum odit tempora?
-                    Corrupti maiores velit consequuntur cupiditate reiciendis similique provident repudiandae.</p>
-            </div>
+              <div class="title">Ofrecemos</div>
+              <p>
+              En <strong>Verde Vivo</strong> brindamos soluciones integrales para el cuidado y diseño de áreas verdes, adaptadas a las necesidades de hogares, empresas y espacios públicos. Nuestro objetivo es embellecer y mantener entornos naturales que aporten bienestar y valor estético.
+
+              <br><br>
+
+              Ofrecemos servicios de jardinería, diseño paisajístico, instalación de sistemas de riego, poda profesional, limpieza y mantenimiento periódico de jardines. También trabajamos en proyectos especiales de reforestación urbana y recuperación de áreas verdes deterioradas.
+
+              <br><br>
+
+              Cada servicio se realiza con personal capacitado, herramientas especializadas y un enfoque sostenible que busca proteger y conservar el medio ambiente. En vivoVerde, cuidamos cada espacio verde como si fuera nuestro.
+              </p>
+
         </div>
 
     </div>
@@ -149,42 +164,79 @@
         
         </div>
         <!-- Reemplazar todos los duplicados de card-detail por contenedores únicos -->
-        <div class="card" data-card="card1">
-            <button class="close-card">Cerrar</button>
-            <div    -content">
-                <p>Contenido de la card 1</p>
-            </div>
-        </div>
-        <div class="card" data-card="card2">
-            <button class="close-card">Cerrar</button>
-            <div class="card-content">
-                <p>Contenido de la card 2</p>
-            </div>
-        </div>
-        <div class="card" data-card="card3">
-            <button class="close-card">Cerrar</button>
-            <div class="card-content">
-                <p>Contenido de la card 3</p>
-            </div>
-        </div>
-        <div class="card" data-card="card4">
-            <button class="close-card">Cerrar</button>
-            <div class="card-content">
-                <p>Contenido de la card 4</p>
-            </div>
-        </div>
-        <div class="card" data-card="card5">
-            <button class="close-card">Cerrar</button>
-            <div class="card-content">
-                <p>Contenido de la card 5</p>
-            </div>
-        </div>
-        <div class="card" data-card="card6">
-            <button class="close-card">Cerrar</button>
-            <div class="card-content">
-                <p>Contenido de la card 6</p>
-            </div>
+<div class="card" data-card="card1">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Gerente del Área Verde – GILMAR SUBUYUJ</strong></p>
+        <ul>
+            <li>Coordinas todo el funcionamiento del equipo.</li>
+            <li>Planificas los servicios ofrecidos.</li>
+            <li>Supervisas los resultados y propones mejoras.</li>
+            <li>Representas al equipo en el consejo directivo.</li>
+        </ul>
     </div>
+</div>
+
+<div class="card" data-card="card2">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Jefe de Mantenimiento de Jardines – ANIBAL TUYUC</strong></p>
+        <ul>
+            <li>Organiza el calendario de poda, riego y fertilización.</li>
+            <li>Supervisa al personal operativo en campo.</li>
+            <li>Controla el uso de herramientas y maquinaria.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card" data-card="card3">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Encargado de Paisajismo – EDRAS GAMBOA</strong></p>
+        <ul>
+            <li>Diseña proyectos visuales para embellecer el área verde.</li>
+            <li>Selecciona plantas, flores y distribución de espacios.</li>
+            <li>Propone decoraciones temáticas (según temporada).</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card" data-card="card4">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Responsable de Sustentabilidad y Medio Ambiente – ERIK PATA</strong></p>
+        <ul>
+            <li>Se asegura de que las prácticas sean ecológicas.</li>
+            <li>Propone métodos de reciclaje de desechos orgánicos.</li>
+            <li>Promueve el uso de fertilizantes y productos biodegradables.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card" data-card="card5">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Técnico en Sistemas de Riego – LEONARDO ASPUAC</strong></p>
+        <ul>
+            <li>Instala y mantiene los sistemas de riego automatizado.</li>
+            <li>Calcula los tiempos y cantidad de agua por zona.</li>
+            <li>Realiza pruebas técnicas y reparaciones.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="card" data-card="card6">
+    <button class="close-card">Cerrar</button>
+    <div class="card-content">
+        <p><strong>Asistente Administrativo del Área Verde – ANDRÉS ROJAS</strong></p>
+        <ul>
+            <li>Lleva el control de insumos, materiales y gastos.</li>
+            <li>Elabora reportes, presupuestos y cotizaciones.</li>
+            <li>Apoya en la comunicación con los hoteles interesados.</li>
+        </ul>
+    </div>
+</div>
+
     
     </div>
 
@@ -193,7 +245,7 @@
       <!--Nosotros-->
       <section id="nosotros">
         <div class="time-lime">
-          <h1>Faces del Procesos</h1>
+          <h1>Fases del Procesos</h1>
 
           <div class="process-wrapper">
             <div id="progress-bar-container">
@@ -216,65 +268,50 @@
               </div>
             </div>
             <div id="progress-content-section">
-              <div class="section-content discovery active">
-                <h2>2001</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  neque justo, consequat non fermentum ac, tempor eu turpis.
-                  Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper
-                  ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante
-                  consequat placerat ut sed eros. Nullam porttitor mattis mi, id
-                  fringilla ex consequat eu. Praesent pulvinar tincidunt leo et
-                  condimentum. Maecenas volutpat turpis at felis egestas
-                  malesuada. Phasellus sem odio, venenatis at ex a, lacinia
-                  suscipit orci.
-                </p>
-              </div>
+              
+            <div class="section-content discovery active">
+  <h2>PLANEACIÓN</h2>
+  <p>
+    En esta fase se definen los objetivos estratégicos, se identifican los clientes potenciales y se analizan las necesidades del mercado.  
+    Se destaca la ventaja competitiva de vivoVerde al ofrecer servicios ecológicos y personalizados.  
+    Se plantean metas SMART, como alcanzar contratos con hoteles y reducir el consumo de agua en áreas verdes.  
+    Además, se establecen estrategias comerciales, operativas y de innovación tecnológica mediante sensores y fertilizantes orgánicos.  
+    Todo esto busca posicionar la marca como una aliada del turismo sostenible.  
+  </p>
+</div>
 
-              <div class="section-content strategy">
-                <h2>2002</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  neque justo, consequat non fermentum ac, tempor eu turpis.
-                  Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper
-                  ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante
-                  consequat placerat ut sed eros. Nullam porttitor mattis mi, id
-                  fringilla ex consequat eu. Praesent pulvinar tincidunt leo et
-                  condimentum. Maecenas volutpat turpis at felis egestas
-                  malesuada. Phasellus sem odio, venenatis at ex a, lacinia
-                  suscipit orci.
-                </p>
-              </div>
+<div class="section-content strategy">
+  <h2>ORGANIZACIÓN</h2>
+  <p>
+    Esta fase se enfoca en distribuir de forma eficiente los recursos y tareas.  
+    Se estructura el equipo en áreas especializadas (jardinería, paisajismo, riego, etc.) bajo la coordinación del Gerente del Área Verde.  
+    Se definen claramente los recursos humanos, materiales y tecnológicos necesarios para la operación.  
+    Cada colaborador cuenta con un manual de funciones detallado, que incluye horarios, protocolos y metas mensuales.  
+    Todo está orientado a lograr una organización funcional, productiva y alineada con los objetivos estratégicos.  
+  </p>
+</div>
 
-              <div class="section-content creative">
-                <h2>2003</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  neque justo, consequat non fermentum ac, tempor eu turpis.
-                  Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper
-                  ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante
-                  consequat placerat ut sed eros. Nullam porttitor mattis mi, id
-                  fringilla ex consequat eu. Praesent pulvinar tincidunt leo et
-                  condimentum. Maecenas volutpat turpis at felis egestas
-                  malesuada. Phasellus sem odio, venenatis at ex a, lacinia
-                  suscipit orci.
-                </p>
-              </div>
+<div class="section-content creative">
+  <h2>DIRECCIÓN</h2>
+  <p>
+    La dirección se centra en motivar y coordinar al equipo para una ejecución eficiente.  
+    Se promueve un liderazgo participativo, donde todos pueden proponer ideas y mejoras.  
+    Se establece una comunicación fluida por distintos canales, incluyendo reuniones semanales y medios digitales.  
+    Se implementa un sistema de incentivos ecológicos, reconocimientos y capacitaciones continuas.  
+    La toma de decisiones se basa en análisis de datos, retroalimentación de clientes y trabajo colaborativo.  
+  </p>
+</div>
 
-              <div class="section-content production">
-                <h2>2004</h2>
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                  neque justo, consequat non fermentum ac, tempor eu turpis.
-                  Proin nulla eros, placerat non ipsum ut, dapibus ullamcorper
-                  ex. Nulla in dapibus lorem. Suspendisse vitae velit ac ante
-                  consequat placerat ut sed eros. Nullam porttitor mattis mi, id
-                  fringilla ex consequat eu. Praesent pulvinar tincidunt leo et
-                  condimentum. Maecenas volutpat turpis at felis egestas
-                  malesuada. Phasellus sem odio, venenatis at ex a, lacinia
-                  suscipit orci.
-                </p>
-              </div>
+<div class="section-content production">
+  <h2>CONTROL</h2>
+  <p>
+    En esta etapa se miden y controlan los resultados para asegurar el cumplimiento de los planes.  
+    Se aplican distintos tipos de control: preventivo, concurrente y posterior.  
+    Se monitorean indicadores clave como satisfacción del cliente, ahorro de agua y reciclaje de residuos.  
+    Las evaluaciones periódicas permiten identificar fallos y tomar acciones correctivas oportunas.  
+    El objetivo es mantener altos estándares de calidad, eficiencia operativa y responsabilidad ambiental.  
+  </p>
+</div>
 
             </div>
           </div>
@@ -362,18 +399,23 @@
   </div>
 </div>
 
-    <div class="section" id="intro">
+
+ <div class="section" id="intro">
       
         <div class="content-fit">
              <div class="title"> Nuestro respaldo legal</div>
             <div class="download-buttons">
-                <a href="docs/documento1.pdf" class="btn-download" download>Descargar nuestro documento 1</a>
-                <a href="docs/documento2.pdf" class="btn-download" download>Descargar nuestro documento 2</a>
-                <a href="docs/documento3.pdf" class="btn-download" download>Descargar nuestro documento 3</a>
+                <a href="assets/doc/Patente.PDF" class="btn-download" download>Patente de Comercio</a>
+                <a href="assets/doc/registro_mercantil.PDF" class="btn-download" download>Registro mercantil</a>
+                <a href="assets/doc/Fases.pdf" class="btn-download" download>Fases de organizacion</a>
+            </div>
+            <div class="legal-gallery">
+              <div class="title">Archivos en conjunto</div>
+                <img src="assets/img/Organigrama general.jpg" alt="Documento legal 1">
+              
             </div>
         </div>
-    </div>
-
+    </div> 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="assets/js/js.js"></script>

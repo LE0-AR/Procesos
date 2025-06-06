@@ -902,3 +902,40 @@ h1 {
         max-width: 90vw;
     }
 }
+
+/* Galería de imágenes legales */
+.legal-gallery {
+    display: flex;
+    gap: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.legal-gallery img {
+    max-width: 50%;
+    width: 100%;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px #0004;
+    object-fit: cover;
+    background: #fff;
+    transition: transform 0.2s;
+}
+.legal-gallery img:hover {
+    transform: scale(1.05);
+}
+@media (max-width: 900px) {
+    .legal-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+    }
+    .legal-gallery img {
+        max-width: 90vw;
+    }
+}
+
+/* Slider backgrounds por id */
+.card-content{
+  color: #000000;
+}
